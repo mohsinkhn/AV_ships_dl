@@ -1,7 +1,7 @@
 ## Analtics Vidhya - Game of Deep Learning
 
 ### Problem:
-The objective was to classify maritime vessels images into 5 different categories a.k.a. Cargo, Tanker, Millitary, Cruise and ___.
+The objective was to classify maritime vessels images into 5 different categories.
 
 Roughly 6K images were provided for training with uneven distribution aross classes. Test set has around 2K images wth distribution of classes similar to test set.
 
@@ -24,7 +24,7 @@ The plan was to try out different image augmenetations and training/finetuning s
 1. Densnent169 - after trying out few different traning schedules, I settled on following:
     a.) train head with fit one cycle for 5 epochs and 3e-4 lr
     b.) unfeeze all layers
-    c.) fit one cyelc over 5 epochs 4 times with lr's 5e-4, 1e-4, 5e-5, 1e-5 ___
+    c.) fit one cyelc over 5 epochs 4 times with lr's 5e-4, 1e-4, 5e-5, 1e-5, 5e-6
 
 
 2. Inceptionv4 - For inception fitting head prior to unfreezing all layers was resulting in very slow convergence, so I decided to unfreeze all layeres in first step and followed same trainig schedule as in 1.
@@ -49,5 +49,4 @@ The plan was to try out different image augmenetations and training/finetuning s
 3. Run `bash run_all.sh` in bash shell
 
 ### Dependencies
-  *  fastai == ___
-
+  *  fastai == 1.0
